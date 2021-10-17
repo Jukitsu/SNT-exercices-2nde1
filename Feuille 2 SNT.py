@@ -38,7 +38,6 @@ def prime_factors(n):
     for l in range(2, n + 1):
         if is_prime(l):
             primes_in.append(l)
-    print(primes_in)
     while n != 1:
         for p in primes_in:
             if not n % p:
@@ -65,11 +64,12 @@ def divs(n):
 
 def is_perfect(n):
     divisors = divs(n)
-    divisors.remove(n)
-    return sum(divisors) == n
+    return sum(divisors) - n == n
 
 if __name__ == "__main__":
     for x in range(14):
         print(f"{x} est ", "parfait" if is_perfect(x) else " pas parfait")
 
-        
+
+
+
