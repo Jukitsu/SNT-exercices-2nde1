@@ -54,17 +54,19 @@ if __name__ == "__main__":
 
 # Exercice 3
 
-def divs(n):
+def proper_divs(n):
     y = []
     for i in range(1, math.floor(math.sqrt(n))+1):
-        if not n % i:
-            y.append(n)
-            y.append(n // i)
+        if not n % i and n != i:
+            y.append(i)
+            if n // i != i and n // i != n:
+                y.append(n // i)
     return y
 
 def is_perfect(n):
-    divisors = divs(n)
-    return sum(divisors) - n == n
+    divisors = proper_divs(n)
+    print(divisors)
+    return sum(divisors) == n
 
 if __name__ == "__main__":
     for x in range(14):
