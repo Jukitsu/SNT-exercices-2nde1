@@ -1,6 +1,8 @@
 # Exercice 1
 
 def pgcd(a, b):
+    if not (a and b):
+        return a if a else b
     return pgcd(b, a%b) if b and a % b else b
 
 def irreductible_frac(frac):
