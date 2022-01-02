@@ -87,7 +87,14 @@ def disk1p1f(center, radius, rgb=(255, 255, 255)):
 sky_stars(10000)
 
 for i in range(0, 10):
-    disk1p1f((randint(0, WIDTH-1), randint(0, HEIGHT-1)),
+    line2p((randint(0, WIDTH-1), randint(0, HEIGHT-1)),
+            (randint(0, WIDTH-1), randint(0, HEIGHT-1)),
+            rgb=(randint(0, 255), randint(0, 255), randint(0, 255)))
+    triangle3p((randint(0, WIDTH-1), randint(0, HEIGHT-1)),
+            (randint(0, WIDTH-1), randint(0, HEIGHT-1)),
+            (randint(0, WIDTH-1), randint(0, HEIGHT-1)),
+            rgb=(randint(0, 255), randint(0, 255), randint(0, 255)))
+    circle1p1f((randint(100, WIDTH-100), randint(100, HEIGHT-100)),
             randint(0, 100),
             rgb=(randint(0, 255), randint(0, 255), randint(0, 255)))
 
